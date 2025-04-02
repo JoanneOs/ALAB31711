@@ -44,3 +44,20 @@ class Vehicle {
   console.log(myBuick.wheels);
   console.log(myBuick.mdl);
   
+
+  ///testing
+  const testCycle1 = new NCycle<number>(1, 2, 3);
+testCycle1.print();
+testCycle1.printAll();
+
+
+const testCycle2 = new NCycle<string>("This", "That", 4);
+testCycle2.print();
+testCycle2.printAll();
+
+///testing 
+const makes = ["Volkswagon", "Tesla", "Audi"];
+const models = ["Passat", "Model X", "A4"];
+const testCycle3 = new NCycle<string[]>(makes, models, 4);
+testCycle3.print(1);
+testCycle3.printAll();
