@@ -1,3 +1,21 @@
+// @ts-check
+type VehicleStatus = 'started' | 'stopped';
+
+class Vehicle {
+    status: VehicleStatus = 'stopped';
+    make: string;
+    model: string;
+    wheels: number;
+
+    constructor(make: string, model: string, wheels: number) {
+        this.make = make;
+        this.model = model;
+        this.wheels = wheels;
+    }
+    // ... rest of Vehicle class
+}
+
+
 class Vehicle {
   status = "stopped";
 
@@ -15,8 +33,8 @@ class Vehicle {
 }
 
 class Car extends Vehicle {
-  constructor(make, model) {
-    super(make, model, "four");
+  constructor(make: string, model: string) {
+      super(make, model, 4); // Changed from "four" to number
   }
 }
 
