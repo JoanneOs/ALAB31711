@@ -61,3 +61,14 @@ const myBuick = new Car("Buick", "Regal");
 myBuick.wheels = myBuick.wheels - 1;
 console.log(myBuick.wheels);
 console.log(myBuick.mdl);
+
+
+/////adding NCycle class
+
+class NCycle<T>{
+  make:T|T[];
+  model:T|T[];
+  wheels: number;
+  status:VehicleStatus='stopped';
+
+}
