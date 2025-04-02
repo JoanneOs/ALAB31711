@@ -44,11 +44,11 @@ class MotorCycle extends Vehicle {
   }
 }
 
-function printStatus(vehicle) {
-  if (vehicle.status === "running") {
-    console.log("The vehicle is running.");
+function printStatus(vehicle: Vehicle): void {
+  if (vehicle.status === 'started') { // Fixed 'running' to 'started'
+      console.log("The vehicle is running.");
   } else {
-    console.log("The vehicle is stopped.");
+      console.log("The vehicle is stopped.");
   }
 }
 
