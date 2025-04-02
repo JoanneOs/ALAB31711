@@ -9,3 +9,8 @@ Changed "rootDir": "src" to "rootDir": "tsSetup" to match your folder structure
 Added "outDir": "out" to direct compiled JS files to your out folder
 Added "include" array to explicitly specify which files to compile# ALAB31711
 
+Found 21 errors in 2 files.
+
+Errors  Files
+    17  index.ts:4
+     1  out/index.js:61
