@@ -71,4 +71,40 @@ class NCycle<T>{
   wheels: number;
   status:VehicleStatus='stopped';
 
+  constructor(make: T | T[], model: T | T[], wheels: number) {
+    this.make = make;
+    this.model = model;
+    this.wheels = wheels;
+
+
+}
+
+print(index: number = 0): void {
+  if (!Array.isArray(this.make) && !Array.isArray(this.model)) {
+      console.log(`This is a ${this.make} ${this.model} NCycle.`);
+  } else if (Array.isArray(this.make) && Array.isArray(this.model)) {
+      if (this.make[index] && this.model[index]) {
+          console.log(`This NCycle has a ${this.make[index]} ${this.model[index]} at ${index}.`);
+      } else {
+          console.log('This NCycle was not created properly.');
+      }
+  } else {
+      console.log('This NCycle was not created properly.');
+  }
+}
+
+printAll(): void {
+  if (!Array.isArray(this.make) || !Array.isArray(this.model)) {
+      this.print();
+      return;
+  }
+
+  const minLength = Math.min(this.make.length, this.model.length);
+  for (let i = 0; i < minLength; i++) {
+      console.log(`This NCycle has a ${this.make[i]} ${this.model[i]} at ${i}.`);
+  }
+  if (this.make.length !== this.model.length) {
+      console.log('Warning: Make and model arrays have different lengths');
+  }
+}
 }
